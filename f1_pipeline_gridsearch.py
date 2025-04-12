@@ -2,7 +2,7 @@
 author: Sam Hersick
 assignment: CS484 pa3
 date: 4/11/25
-purpose: python script for creating pipeline and gridsearch for training two random forest models on diabetes data 
+purpose: python script for creating pipeline and gridsearch for f1 scoring metric 
 notes: 
     1. Create a pipeline
     2. Create a parameter grid
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     #Create a parameter grid
     p_grid = {
         'rf__class_weight':[None, "balanced"], #use class weight to handle imbalance or not
-        'rf__n_estimators': [20, 100, 200], #number of trees
+        'rf__n_estimators': [50, 100, 200], #number of trees
         'rf__oob_score': [True, False], #whether to use out-of-bag samples
         'rf__max_features': [None, "sqrt"], #max number of features to consider when looking for the best split
         'rf__max_depth':[None, 5] #max depth of the tree
@@ -50,7 +50,6 @@ if __name__ == "__main__":
         scoring='f1',
         cv=2,
         verbose=1,
-        n_jobs=4, #multithread while running the grid search to speed up process
         error_score='raise'
     )
 
@@ -72,6 +71,6 @@ if __name__ == "__main__":
     print(classification_report(y_test, gs.predict(X_test)))
 
     #save grid search results to csv file
-    pd.DataFrame(gs.cv_results_).to_csv("rf_grid_accuracy.csv", index=False)
+    pd.DataFrame(gs.cv_results_).to_csv("rf_grid_f1.csv", index=False)
 
     print("\n\nSAVED AND FINISHED!")

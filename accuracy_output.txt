@@ -1,0 +1,58 @@
+The features are:
+ID, Diabetes_binary, HighBP, HighChol, CholCheck, BMI, Smoker, Stroke, HeartDiseaseorAttack, PhysActivity, Fruits, Veggies, HvyAlcoholConsump, AnyHealthcare, NoDocbcCost, GenHlth, MentHlth, PhysHlth, DiffWalk, Sex, Age, Education, Income
+
+ Diabetes_binary         int64
+HighBP                  int64
+HighChol                int64
+CholCheck               int64
+BMI                     int64
+Smoker                  int64
+Stroke                  int64
+HeartDiseaseorAttack    int64
+PhysActivity            int64
+Fruits                  int64
+Veggies                 int64
+HvyAlcoholConsump       int64
+AnyHealthcare           int64
+NoDocbcCost             int64
+GenHlth                 int64
+MentHlth                int64
+PhysHlth                int64
+DiffWalk                int64
+Sex                     int64
+Age                     int64
+Education               int64
+Income                  int64
+dtype: object
+Fitting 2 folds for each of 48 candidates, totalling 96 fits
+0.8648691264585304
+Pipeline(steps=[('rf',
+                 RandomForestClassifier(max_depth=5, max_features=None,
+                                        n_estimators=50, oob_score=True,
+                                        random_state=1))])
+Execution time: 1528.8058 seconds
+
+TRAINING REPORT:
+              precision    recall  f1-score   support
+
+           0       0.88      0.98      0.93    163751
+           1       0.56      0.13      0.22     26509
+
+    accuracy                           0.86    190260
+   macro avg       0.72      0.56      0.57    190260
+weighted avg       0.83      0.86      0.83    190260
+
+
+TESTING REPORT:
+              precision    recall  f1-score   support
+
+           0       0.87      0.98      0.93     54583
+           1       0.56      0.13      0.21      8837
+
+    accuracy                           0.86     63420
+   macro avg       0.72      0.56      0.57     63420
+weighted avg       0.83      0.86      0.83     63420
+
+
+
+SAVED AND FINISHED!

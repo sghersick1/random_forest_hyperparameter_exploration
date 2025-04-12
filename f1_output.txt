@@ -1,0 +1,58 @@
+The features are:
+ID, Diabetes_binary, HighBP, HighChol, CholCheck, BMI, Smoker, Stroke, HeartDiseaseorAttack, PhysActivity, Fruits, Veggies, HvyAlcoholConsump, AnyHealthcare, NoDocbcCost, GenHlth, MentHlth, PhysHlth, DiffWalk, Sex, Age, Education, Income
+
+ Diabetes_binary         int64
+HighBP                  int64
+HighChol                int64
+CholCheck               int64
+BMI                     int64
+Smoker                  int64
+Stroke                  int64
+HeartDiseaseorAttack    int64
+PhysActivity            int64
+Fruits                  int64
+Veggies                 int64
+HvyAlcoholConsump       int64
+AnyHealthcare           int64
+NoDocbcCost             int64
+GenHlth                 int64
+MentHlth                int64
+PhysHlth                int64
+DiffWalk                int64
+Sex                     int64
+Age                     int64
+Education               int64
+Income                  int64
+dtype: object
+Fitting 2 folds for each of 48 candidates, totalling 96 fits
+0.43206507586621984
+Pipeline(steps=[('rf',
+                 RandomForestClassifier(class_weight='balanced', max_depth=5,
+                                        n_estimators=200, oob_score=True,
+                                        random_state=1))])
+Execution time: 818.1968 seconds
+
+TRAINING REPORT:
+              precision    recall  f1-score   support
+
+           0       0.95      0.71      0.81    163751
+           1       0.30      0.78      0.43     26509
+
+    accuracy                           0.72    190260
+   macro avg       0.63      0.74      0.62    190260
+weighted avg       0.86      0.72      0.76    190260
+
+
+TESTING REPORT:
+              precision    recall  f1-score   support
+
+           0       0.95      0.71      0.81     54583
+           1       0.30      0.78      0.44      8837
+
+    accuracy                           0.72     63420
+   macro avg       0.63      0.74      0.62     63420
+weighted avg       0.86      0.72      0.76     63420
+
+
+
+SAVED AND FINISHED!
