@@ -73,4 +73,11 @@ if __name__ == "__main__":
     #save grid search results to csv file
     pd.DataFrame(gs.cv_results_).to_csv("rf_grid_accuracy.csv", index=False)
 
+    '''IMPORTANT NOTE:
+    - I used VIM search/replace to go in and manually add "None" to all of the blank spaces in the csv because 
+    Pandas interprets the None value for class_weight, max_depth, and max_features as a missing value
+    
+    1. Highlight text
+    2. :s/,,/,None,/g --> run twice because of three missing cells in a row'''
+
     print("\n\nSAVED AND FINISHED!")
