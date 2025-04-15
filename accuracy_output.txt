@@ -1,3 +1,4 @@
+(python_ML_3.13) sghersick@draco:~/cs484s25/pa3-sghersick1$ python diabetes_gridsearch.py --scoring "accuracy" --output "accuracy_gs_results.csv"
 The features are:
 ID, Diabetes_binary, HighBP, HighChol, CholCheck, BMI, Smoker, Stroke, HeartDiseaseorAttack, PhysActivity, Fruits, Veggies, HvyAlcoholConsump, AnyHealthcare, NoDocbcCost, GenHlth, MentHlth, PhysHlth, DiffWalk, Sex, Age, Education, Income
 
@@ -24,13 +25,19 @@ Age                     int64
 Education               int64
 Income                  int64
 dtype: object
+
+
+Performing grid search for -- accuracy...
+
 Fitting 2 folds for each of 48 candidates, totalling 96 fits
+grid search finished. results...
+
 0.8648691264585304
 Pipeline(steps=[('rf',
                  RandomForestClassifier(max_depth=5, max_features=None,
                                         n_estimators=50, oob_score=True,
                                         random_state=1))])
-Execution time: 1528.8058 seconds
+Execution time: 1406.0836 seconds
 
 TRAINING REPORT:
               precision    recall  f1-score   support
@@ -56,3 +63,4 @@ weighted avg       0.83      0.86      0.83     63420
 
 
 SAVED AND FINISHED!
+        Grid Search results savd to accuracy_gs_results.csv
