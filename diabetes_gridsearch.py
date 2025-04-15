@@ -101,11 +101,11 @@ def perform_gs(scoring_metric, output_path):
 
 #main method
 if __name__ == "__main__":
-    #Take in scoring metric and output file as CLI arguements
+    #Take in scoring metric and output file as CLI arguments
     parser = argparse.ArgumentParser(description="Run GridSearchCV for RandomForestClassifier")
 
     parser.add_argument("--scoring", type=str, choices=["f1", "accuracy", "balanced_accuracy"], required=True, help="Scoring metric for grid search (required)")
-    parser.add_argument("--output", type=str, help="Output CSV file for grid search results")
+    parser.add_argument("--output", type=str, help="Output CSV file for grid search results (ex: output_file.csv)")
 
     args = parser.parse_args()
 
