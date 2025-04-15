@@ -19,7 +19,7 @@ These following results can be found in accuracy_output.txt and f1_output.txt fi
 
 ### How does your interpretation change (or not change) after seeing the test data's classification report? Why do you think the results are what they are?
 
-- **Classes:** Class 1 data: **54583** observations, Class 0 data: **8837** observations
+- **Test Classes:** Class 1 data: **54583** observations, Class 0 data: **8837** observations
 - **Change in interpretation:** After seeing the Testing classification reports my interpretations do not change at all. We see from both of the testing classification reports that the data is extremely similar to the training reports with no real noticable change.
 - **Why no change?** I believe the results are the way that they are because of the nature of random forests and grid searches. When doing grid searches we use cross validation to improve the robustness of our results. With random forests we also use bootstrapping and oob_score to constantly test our data and never before seen data. Random forests naturally are very good at not overfitting because they are made up of many different decision trees, and use concepts from ensemble learning. This allows them be very good at generalizing to new data (as we can see in our results). All of these factors, as well as the other hyper parameters we used (such as max_depth, and max_features which prevent overfitting) lead to a robust model that really shouldn't perform worse on the testing data.
 
