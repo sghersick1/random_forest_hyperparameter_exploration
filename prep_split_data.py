@@ -22,8 +22,14 @@ def load_prep_split():
     print(f"The features are:\n{", ".join(df.columns)}")
     df.drop(columns=['ID'], inplace=True)
 
-    #check if the data is numeric
+    #check if the data is numeric - it already is numeric!
     print("\n", df.dtypes)
+
+    '''
+    - The data has no missing value to worry about
+    - Random Forest does not need any scaling
+    - Class imbalance is the only major concern, but seeing how different scoring metrics/hyper parameters before on the
+    imbalanced data is one of the important aspects of this lab that we will dive into in: fs_analysis.ipynb'''
 
     X = df.drop(columns=['Diabetes_binary'])
     y = df['Diabetes_binary']
