@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 #load in the diabetes data, preprocess, return the split data
 def load_prep_split():
     #read in the data set into a dataframe
-    df = pd.read_csv("diabetes_binary.csv", encoding="utf-8")
+    df = pd.read_csv("data/diabetes_binary.csv", encoding="utf-8")
 
     #print the features and drop the 'ID' column
     print(f"The features are:\n{", ".join(df.columns)}")
